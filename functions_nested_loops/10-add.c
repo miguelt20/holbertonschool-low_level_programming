@@ -10,8 +10,8 @@ int add(int a, int b)
 {
 	int sum;
 
-	sum = add(a, b);
-	_putchar(sum);
+	sum = a + b;
+	_putchar((sum) + '0');
 	return (sum);
 
 }
