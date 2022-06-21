@@ -13,7 +13,7 @@ if (a > c && c > b)
 {
 largest = a;
 }
-else if (b > a && a > c)
+else if (b > c && c > a)
 {
 largest = b;
 }
