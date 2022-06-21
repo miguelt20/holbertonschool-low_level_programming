@@ -9,11 +9,11 @@
 int largest_number(int a, int b, int c)
 {
 int largest;
-if (a > b && b > c)
+if (a > c && c > b)
 {
 largest = a;
 }
-else if (b > c && c > a)
+else if (b > a && a > c)
 {
 largest = b;
 }
