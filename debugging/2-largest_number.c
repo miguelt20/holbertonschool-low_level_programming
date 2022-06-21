@@ -9,15 +9,15 @@
 int largest_number(int a, int b, int c)
 {
 int largest;
-if (a > c && c > b && a >= b)
+if (a >= b && b >= c)
 {
 largest = a;
 }
-else if (b > a && a > c && b > c)
+else if (b > a && a > c )
 {
 largest = b;
 }
-else
+ else if (c > b && b > a)
 {
 largest = c;
 }
