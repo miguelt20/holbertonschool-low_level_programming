@@ -7,13 +7,14 @@
 
 void print_line(int n)
 {
-	char gb = 95;
+	int gb = 95;
+	int v;
 
-	if (n < 0)
+	if (n > 0)
 	{
-		for (gb = '0'; gb <= n; gb++)
+		for (v = 0; v <= n; v++)
 		{
-			_putchar(gb + '0');
+			_putchar(gb);
 		}
 		_putchar('\n');
 	}
