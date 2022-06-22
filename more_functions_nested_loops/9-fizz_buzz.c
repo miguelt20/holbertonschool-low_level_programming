@@ -2,7 +2,6 @@
 /**
  *main - it prints FizzBuzz
  *Return: 0
- *@n: variable
  */
 int main(void)
 {
