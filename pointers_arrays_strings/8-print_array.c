@@ -6,7 +6,7 @@
  *@a: pointer
  *@n: number of elements
  */
-void print_array(int *a, int n)i
+void print_array(int *a, int n)
 {
 	int i;
 
