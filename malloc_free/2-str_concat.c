@@ -29,21 +29,17 @@ char *str_concat(char *s1, char *s2)
 	{
 		j++;
 	}
-
 	array = malloc(sizeof(char) * (s1[i] + s2[j]));
-	
+
 	if (!array)
-	{
 		return (NULL);
-	}
+
 	while (s1[x])
 	{
 		array[z++] = s1[x];
 		x++;
 	}
-
 	x = 0;
-
 	while (s2[x])
 	{
 		array[z++] = s2[x];
@@ -51,5 +47,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	return (array);
 	free(array);
-
 }
