@@ -31,7 +31,11 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	array = malloc(sizeof(char) * (s1[i] + s2[j]));
-
+	
+	if (!array)
+	{
+		return (NULL);
+	}
 	while (s1[x])
 	{
 		array[z++] = s1[x];
