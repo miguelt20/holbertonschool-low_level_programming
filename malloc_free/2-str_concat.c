@@ -10,7 +10,7 @@ char *str_concat(char *s1, char *s2)
 {
 	int i = 0, j = 0;
 	int x = 0, z = 0;
-	char *array;
+	char *array = NULL;
 
 	if (s1 == NULL)
 	{
@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		j++;
 	}
-	array = malloc(sizeof(char) * (s1[i] + s2[j]) + 1);
+	array = malloc(sizeof(char) * (s1[i] + s2[j]));
 
 	if (!array)
 		return (NULL);
