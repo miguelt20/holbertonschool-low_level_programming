@@ -25,6 +25,10 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	else if (i == 0)
+	{
+		return (NULL);
+	}
 
 	j = 0;
 
