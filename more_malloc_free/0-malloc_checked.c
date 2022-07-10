@@ -9,7 +9,7 @@ void *malloc_checked(unsigned int b)
 {
 	int *p;
 
-	p = malloc(sizeof(void *) * (b));
+	p = (void *)malloc(sizeof(void *) * (b));
 
 	if (p == NULL)
 	{
