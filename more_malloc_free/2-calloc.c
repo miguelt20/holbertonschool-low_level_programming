@@ -8,13 +8,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *arr;
+	unsigned int *arr;
 	unsigned int i = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	arr = malloc(nmemb * sizeof(size));
+	arr = (unsigned int *)malloc(sizeof(unsigned int) * (nmemb * size));
 
 	if (!arr)
 		return (NULL);
