@@ -1,6 +1,11 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-
+/**
+ *struct dog - struct
+ *@name:name
+ *@age:age
+ *@owner:owner
+ */
 struct dog
 {
 	char *name;
