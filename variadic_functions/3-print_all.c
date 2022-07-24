@@ -78,7 +78,7 @@ void s_fun(va_list pmt)
 	char *pmts = va_arg(pmt, char*);
 
 	if (!pmts)
-		pmts = "(nill)";
+		pmts = "(nil)";
 
 	printf("%s", pmts);
 }
