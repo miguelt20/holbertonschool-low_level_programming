@@ -28,10 +28,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	while (temp != NULL && idx != 1)
 	{
-		temp = temp->next;
-		idx--;
 		if (temp == NULL && idx != 1)
 			return (NULL);
+		temp = temp->next;
+		idx--;
 	}
 
 	temp2 = temp->next;
