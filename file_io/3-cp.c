@@ -33,13 +33,13 @@ int main(int argc, char *argv[])
 	cl_O = close(fileO);
 	if (cl_O == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fileO);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileO);
 		exit(100);
 	}
 	cl_D = close(fileD);
 	if (cl_D == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fileO);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileO);
 		exit(100);
 	}
 	return (0);
