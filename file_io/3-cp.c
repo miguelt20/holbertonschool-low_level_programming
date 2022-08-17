@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	cl_D = close(fileD);
 	if (cl_D == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fileD);
+		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fileO);
 		exit(100);
 	}
 	return (0);
