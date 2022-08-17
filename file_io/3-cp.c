@@ -7,32 +7,29 @@
  */
 int main(int argc, char *argv[])
 {
-	int fileO, fileD, wr, rd, cl_O, cl_D;
+	int fileO, fileD, wr, cl_O, cl_D;
 	char *buf[1024];
+	ssize_t rd = 1024;
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	fileO = open(argv[1], O_RDONLY);
-	rd = read(fileO, buf, 1024);
-	if (fileO == -1 || rd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
 	fileD = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	wr = write(fileD, buf, rd);
+	error_open(fileO, fileD, argv);
 
-	if (fileD == -1 || wr == -1)
+	while (rd == 1024)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+		rd = read(fileO, buf, 1024);
+		if (rd == -1)
+			error_open(-1, 0, argv);
 
+		wr = write(fileD, buf, rd);
+		if (wr == -1)
+			error_open(0, -1, argv);
+	}
 	cl_O = close(fileO);
 	if (cl_O == -1)
 	{
@@ -46,4 +43,23 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
+}
+/**
+ *error_open - verifactes if a file can be opened
+ *@fileO: origin file
+ *@fileD: destination file
+ *@argv: arrays
+ */
+void error_open(int fileO, int fileD, char *argv[])
+{
+	if (fileO == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (fileD == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 }
