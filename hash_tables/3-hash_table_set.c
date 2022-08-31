@@ -23,7 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	newnode->key = strdup(key);
 	newnode->value = strdup(value);
 
-	if (strcmp(key, ht->array[index]->key) == 0)
+	if (strcmp(key, ht->array[index]->key) != 0)
 		newnode->next = ht->array[index];
 
 	ht->array[index] = newnode;
