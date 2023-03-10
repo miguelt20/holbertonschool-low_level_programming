@@ -22,6 +22,46 @@ Many later languages have borrowed syntax/features directly or indirectly from t
 
 So,  if a person learns C programming first, it will help him to learn any modern programming language as well. As learning C help to understand a lot of the underlying architecture of the operating system. Like pointers, working with memory locations, etc.
 
-Here are some of the topics that you can find in this repository:
+<h3 align="center"> Requirements </h3>
 
--
+<h4 align="center"> General requierments for every exercise: </h4>
+
+- Allowed editors: vi, vim, emacs
+- All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- All your files should end with a new line
+- A README.md file at the root of the repo, containing a description of the repository
+- A README.md file, at the root of the folder of this project, containing a description of the project
+- There should be no errors and no warnings during compilation
+- You are not allowed to use `system`
+- Your code should use the <a href="https://github.com/holbertonschool/Betty/wiki"> Betty Style </a>.
+
+<h4 align="center"> Shell Scripts </h4>
+
+- Allowed editors: vi, vim, emacs
+- All your scripts will be tested on Ubuntu 20.04 LTS
+- All your scripts should be exactly two lines long (`$ wc -l file` should print 2)
+- All your files should end with a new line
+- The first line of all your files should be exactly `#!/bin/bash`
+
+<h3> Here are some of the subjects that you can find in this project: </h3>
+
+- Variables, if else, loops
+- Functions, Nested loops
+- Debugging
+- Pointers, Arrays and Strings
+- Recursion
+- Static libraries
+- argc & argv
+- malloc & free
+- Preprocessor
+- Structures, typedef
+- Function pointers
+- Variadic functions
+- Makefiles
+- printf (my own printf function)
+- Singly linked list
+- Bit manipulation
+- File I/O
+- Doubly linked list
+- Simple Shell (my own shell)
+
