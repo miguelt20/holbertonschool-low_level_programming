@@ -1,7 +1,6 @@
 <h1 align="center"> Bit manipulation </h1>
 
-
-<p align="center"> Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result. It is an act of algorithmically manipulating bits or other pieces of data shorter than a word. Computer programming tasks that require bit manipulation include: Low-level device control. </p>
+Bit manipulation is the process of applying logical operations on a sequence of bits to achieve a required result. It is an act of algorithmically manipulating bits or other pieces of data shorter than a word. Computer programming tasks that require bit manipulation include: Low-level device control.
 
 In C, the following 6 operators are bitwise operators (work at bit-level)
 
