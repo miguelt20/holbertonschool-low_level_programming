@@ -7,3 +7,44 @@ Variadic functions are functions that can take a variable number of arguments. I
 ```c
 int function_name(data_type variable_name, ...);
 ```
+Values of the passed arguments can be accessed through the header file named as:
+
+```c
+#include <stdarg.h>
+```
+`<stdarg.h>` includes the following methods:
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td style="width: 50%;">Methods</td>
+    <td style="width: 50%;">Description</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">va_start(va_list ap, argN)</td>
+    <td style="width: 50%;">This enables access to variadic function arguments.
+
+where *va_list* will be the pointer to the last fixed argument in the variadic function
+
+*argN* is the last fixed argument in the variadic function. 
+
+From the above variadic function (function_name (data_type variable_name, …);), variable_name is the last fixed argument making it the argN. Whereas *va_list ap* will be a pointer to argN (variable_name)</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">va_arg(va_list ap, type)</td>
+    <td style="width: 50%;">This one accesses the next variadic function argument.
+
+*va_list ap* is the same as above i.e a pointer to argN
+
+*type* indicates the data type  the *va_list ap* should expect (double, float, int etc.)</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">va_copy(va_list dest, va_list src)</td>
+    <td style="width: 50%;">This makes a copy of the variadic function arguments.</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;">va_end(va_list ap)</td>
+    <td style="width: 50%;">This ends the traversal of the variadic function arguments.</td>
+  </tr>
+  
+</table>
+
+Here, va_list holds the information needed by va_start, va_arg, va_end, and va_copy.
